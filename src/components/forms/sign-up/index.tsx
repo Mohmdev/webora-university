@@ -1,12 +1,12 @@
-"use client"
-import { FormGenerator } from "@/components/global/form-generator"
-import { Loader } from "@/components/global/loader"
-import { Button } from "@/components/ui/button"
-import { GROUPLE_CONSTANTS } from "@/constants"
-import { useAuthSignUp } from "@/hooks/authentication"
-import dynamic from "next/dynamic"
+"use client";
+import { FormGenerator } from "@/components/global/form-generator";
+import { Loader } from "@/components/global/loader";
+import { Button } from "@/components/ui/button";
+import { GROUPLE_CONSTANTS } from "@/constants";
+import { useAuthSignUp } from "@/hooks/authentication";
+import dynamic from "next/dynamic";
 
-type Props = {}
+type Props = {};
 
 const OtpInput = dynamic(
   () =>
@@ -14,7 +14,7 @@ const OtpInput = dynamic(
       (component) => component.default,
     ),
   { ssr: false },
-)
+);
 
 const SignUpForm = (props: Props) => {
   const {
@@ -27,7 +27,7 @@ const SignUpForm = (props: Props) => {
     code,
     setCode,
     getValues,
-  } = useAuthSignUp()
+  } = useAuthSignUp();
 
   return (
     <form
@@ -65,7 +65,7 @@ const SignUpForm = (props: Props) => {
         </Button>
       )}
     </form>
-  )
-}
+  );
+};
 
-export default SignUpForm
+export default SignUpForm;

@@ -1,24 +1,24 @@
-import { AuthFormProps, SIGN_IN_FORM, SIGN_UP_FORM } from "./forms"
+import { type AuthFormProps, SIGN_IN_FORM, SIGN_UP_FORM } from "./forms";
 import {
   GROUP_PAGE_MENU,
-  GroupMenuProps,
+  type GroupMenuProps,
   LANDING_PAGE_MENU,
-  MenuProps,
-} from "./menus"
+  type MenuProps,
+} from "./menus";
 import {
   CREATE_GROUP_PLACEHOLDER,
-  CreateGroupPlaceholderProps,
-} from "./placeholder"
-import { GROUP_LIST, GroupListProps } from "./slider"
+  type CreateGroupPlaceholderProps,
+} from "./placeholder";
+import { GROUP_LIST, type GroupListProps } from "./slider";
 
 type GroupleConstantsProps = {
-  landingPageMenu: MenuProps[]
-  signUpForm: AuthFormProps[]
-  signInForm: AuthFormProps[]
-  groupList: GroupListProps[]
-  createGroupPlaceholder: CreateGroupPlaceholderProps[]
-  groupPageMenu: GroupMenuProps[]
-}
+  landingPageMenu: MenuProps[];
+  signUpForm: AuthFormProps[];
+  signInForm: AuthFormProps[];
+  groupList: GroupListProps[];
+  createGroupPlaceholder: CreateGroupPlaceholderProps[];
+  groupPageMenu: GroupMenuProps[];
+};
 
 export const GROUPLE_CONSTANTS: GroupleConstantsProps = {
   landingPageMenu: LANDING_PAGE_MENU,
@@ -27,4 +27,4 @@ export const GROUPLE_CONSTANTS: GroupleConstantsProps = {
   groupList: GROUP_LIST,
   createGroupPlaceholder: CREATE_GROUP_PLACEHOLDER,
   groupPageMenu: GROUP_PAGE_MENU,
-}
+};

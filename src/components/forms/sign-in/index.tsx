@@ -1,15 +1,15 @@
-"use client"
+"use client";
 
-import { FormGenerator } from "@/components/global/form-generator"
-import { Loader } from "@/components/global/loader"
-import { Button } from "@/components/ui/button"
-import { GROUPLE_CONSTANTS } from "@/constants"
-import { useAuthSignIn } from "@/hooks/authentication"
+import { FormGenerator } from "@/components/global/form-generator";
+import { Loader } from "@/components/global/loader";
+import { Button } from "@/components/ui/button";
+import { GROUPLE_CONSTANTS } from "@/constants";
+import { useAuthSignIn } from "@/hooks/authentication";
 
-type Props = {}
+type Props = {};
 
 const SignInForm = (props: Props) => {
-  const { isPending, onAuthenticateUser, register, errors } = useAuthSignIn()
+  const { isPending, onAuthenticateUser, register, errors } = useAuthSignIn();
 
   return (
     <form className="flex flex-col gap-3 mt-10" onSubmit={onAuthenticateUser}>
@@ -25,7 +25,7 @@ const SignInForm = (props: Props) => {
         <Loader loading={isPending}>Sign In with Email</Loader>
       </Button>
     </form>
-  )
-}
+  );
+};
 
-export default SignInForm
+export default SignInForm;

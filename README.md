@@ -57,11 +57,13 @@ The Vercel environment variables are used to:
 ### Key Components
 
 1. **Custom Domain Management UI**:
+
    - Located at `/group/[groupid]/settings/domains`
    - Allows group owners to add and configure custom domains
    - Shows domain verification status
 
 2. **Domain API Integration**:
+
    - Uses Vercel's API to register and verify domains
    - Requires authentication with Vercel's API using the bearer token
 
@@ -72,10 +74,12 @@ The Vercel environment variables are used to:
 ### Environment Variables Explained
 
 1. **PROJECT_ID_VERCEL**:
+
    - Identifies the Vercel project where domains will be registered
    - Used in API calls to Vercel's domain management endpoints
 
 2. **TEAM_ID_VERCEL**:
+
    - Identifies the Vercel team that owns the project
    - Required for API calls to Vercel's domain management endpoints
 
@@ -97,6 +101,7 @@ This custom domain functionality provides several benefits for the learning mana
 The custom domain functionality is implemented through:
 
 1. **Vercel API Integration**:
+
    - `onAddCustomDomain`: Registers a domain with Vercel and updates the group record
    - `onGetDomainConfig`: Checks the configuration status of a domain
 
@@ -108,29 +113,34 @@ The custom domain functionality is implemented through:
 ## Getting Started
 
 1. Clone the repository:
+
    ```bash
    git clone https://github.com/Mohmdev/webora-university.git
    cd webora-university
    ```
 
 2. Install dependencies:
+
    ```bash
    npm install
    ```
 
 3. Set up environment variables:
    Copy `.env.example` to `.env` and fill in the required values:
+
    ```bash
    cp .env.example .env
    ```
 
 4. Set up the database:
+
    ```bash
    npx prisma generate
    npx prisma db push
    ```
 
 5. Run the development server:
+
    ```bash
    npm run dev
    ```

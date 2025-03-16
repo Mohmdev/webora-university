@@ -1,10 +1,10 @@
-import { InputOTP, InputOTPSlot } from "@/components/ui/input-otp"
-import React from "react"
+import { InputOTP, InputOTPSlot } from "@/components/ui/input-otp";
+import type React from "react";
 
 type Props = {
-  otp: string
-  setOtp: React.Dispatch<React.SetStateAction<string>>
-}
+  otp: string;
+  setOtp: React.Dispatch<React.SetStateAction<string>>;
+};
 
 const OTPInput = ({ otp, setOtp }: Props) => {
   return (
@@ -30,7 +30,7 @@ const OTPInput = ({ otp, setOtp }: Props) => {
         </div>
       </div>
     </InputOTP>
-  )
-}
+  );
+};
 
-export default OTPInput
+export default OTPInput;

@@ -10,31 +10,31 @@ import "./global.css";
 const jakarta = Plus_Jakarta_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-	title: "Webora University",
-	description: "Education & Learning Management Platform",
+  title: "Webora University",
+  description: "Education & Learning Management Platform",
 };
 
 export default function RootLayout({
-	children,
+  children,
 }: Readonly<{
-	children: React.ReactNode;
+  children: React.ReactNode;
 }>) {
-	return (
-		<ClerkProvider>
-			<html lang="en" suppressHydrationWarning>
-				<body className={`${jakarta.className} bg-black`}>
-					<ThemeProvider
-						attribute="class"
-						defaultTheme="dark"
-						disableTransitionOnChange
-					>
-						<ReduxProvider>
-							<ReactQueryProvider>{children}</ReactQueryProvider>
-						</ReduxProvider>
-						<Toaster />
-					</ThemeProvider>
-				</body>
-			</html>
-		</ClerkProvider>
-	);
+  return (
+    <ClerkProvider>
+      <html lang="en" suppressHydrationWarning>
+        <body className={`${jakarta.className} bg-black`}>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="dark"
+            disableTransitionOnChange
+          >
+            <ReduxProvider>
+              <ReactQueryProvider>{children}</ReactQueryProvider>
+            </ReduxProvider>
+            <Toaster />
+          </ThemeProvider>
+        </body>
+      </html>
+    </ClerkProvider>
+  );
 }

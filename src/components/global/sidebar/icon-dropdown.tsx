@@ -1,17 +1,17 @@
-import React from "react"
-import { DropDown } from "../drop-down"
-import { IconRenderer } from "../icon-renderer"
-import { cn } from "@/lib/utils"
-import { ICON_LIST } from "@/constants/icons"
+import type React from "react";
+import { DropDown } from "../drop-down";
+import { IconRenderer } from "../icon-renderer";
+import { cn } from "@/lib/utils";
+import { ICON_LIST } from "@/constants/icons";
 
 type Props = {
-  ref: React.RefObject<HTMLButtonElement>
-  icon: string
-  page?: string
-  channelid: string
-  currentIcon?: string
-  onSetIcon(icon: string): void
-}
+  ref: React.RefObject<HTMLButtonElement>;
+  icon: string;
+  page?: string;
+  channelid: string;
+  currentIcon?: string;
+  onSetIcon(icon: string): void;
+};
 
 const IconDropDown = ({
   ref,
@@ -55,7 +55,7 @@ const IconDropDown = ({
         )}
       </div>
     </DropDown>
-  )
-}
+  );
+};
 
-export default IconDropDown
+export default IconDropDown;

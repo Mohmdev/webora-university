@@ -1,8 +1,8 @@
-import SignUpForm from "@/components/forms/sign-up"
-import { GoogleAuthButton } from "@/components/global/google-oauth-button"
-import { Separator } from "@/components/ui/separator"
+import SignUpForm from "@/components/forms/sign-up";
+import { GoogleAuthButton } from "@/components/global/google-oauth-button";
+import { Separator } from "@/components/ui/separator";
 
-type Props = {}
+type Props = {};
 
 const SignUpPage = (props: Props) => {
   return (
@@ -21,7 +21,7 @@ const SignUpPage = (props: Props) => {
       </div>
       <GoogleAuthButton method="signup" />
     </>
-  )
-}
+  );
+};
 
-export default SignUpPage
+export default SignUpPage;
