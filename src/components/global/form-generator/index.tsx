@@ -1,6 +1,10 @@
 import { Textarea } from "@/components/ui/textarea";
 import { ErrorMessage } from "@hookform/error-message";
-import type { FieldErrors, FieldValues, UseFormRegister } from "react-hook-form";
+import type {
+  FieldErrors,
+  FieldValues,
+  UseFormRegister,
+} from "react-hook-form";
 import { Input } from "../../ui/input";
 import { Label } from "../../ui/label";
 

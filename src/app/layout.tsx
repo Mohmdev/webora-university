@@ -2,6 +2,7 @@ import { ThemeProvider } from "@/components/theme";
 import { ReactQueryProvider } from "@/react-query/provider";
 import { ReduxProvider } from "@/redux/provider";
 import { ClerkProvider } from "@clerk/nextjs";
+import { Analytics } from "@vercel/analytics/next";
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import { Toaster } from "sonner";
@@ -29,7 +30,10 @@ export default function RootLayout({
             disableTransitionOnChange
           >
             <ReduxProvider>
-              <ReactQueryProvider>{children}</ReactQueryProvider>
+              <ReactQueryProvider>
+                {children}
+                <Analytics />
+              </ReactQueryProvider>
             </ReduxProvider>
             <Toaster />
           </ThemeProvider>
